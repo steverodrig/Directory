@@ -16,12 +16,12 @@ class DirectorySearch extends Component {
         // .catch(err => console.log(err));
         // }
         fetch("https://randomuser.me/api/?results=100")
-        .then(res => res.json())
-        .then((data) => {
-            this.setState({ results: data});
-            console.log(data);
-        })
-        .catch(console.log)
+            .then(res => res.json())
+            .then((data) => {
+                this.setState({ results: data.results });
+                console.log(data);
+            })
+            .catch(console.log)
     }
 
     // searchDirectory = query => {
@@ -31,12 +31,11 @@ class DirectorySearch extends Component {
     // }
 
     render() {
-    return (
-        <div>
-           <h1>TESTE</h1>
-           <Directory results={this.state.results} />
-        </div>
-    );
+        return (
+
+            <Directory results={this.state.results} />
+
+        );
     }
 }
 
