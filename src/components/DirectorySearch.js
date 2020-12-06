@@ -3,6 +3,7 @@ import Directory from './Directory';
 // import API from '../utils/API';
 
 class DirectorySearch extends Component {
+
     state = {
         results: []
     }
@@ -32,9 +33,7 @@ class DirectorySearch extends Component {
 
     render() {
         return (
-
             <Directory results={this.state.results} />
-
         );
     }
 }
